@@ -16,6 +16,29 @@ function gems(){
    return randomGem;
 }
 
+//Function to reset
+function reset (){
+    targetNumber = target();
+    currentNumber = 0;
+    $("#wins").text("Wins: " + wins);
+    $("#losses").text("Losses: " + losses);
+    $("#targetNumber").text("Target Number: " + targetNumber);
+    $("#currentNumber").text("Current Number: " + currentNumber);
+    redGem = gems();
+        console.log(redGem);
+    blueGem = gems();
+        console.log(blueGem);
+    greenGem = gems();
+        console.log(greenGem);
+    yellowGem = gems();
+        console.log(yellowGem);
+    gameRunning = true;
+    console.log("reset complete")
+}
+
+//Sets variable for game running
+var gameRunning = true;
+
 //Sets up the variables for the gems
 var redGem = 0;
 var blueGem = 0;
@@ -40,40 +63,62 @@ $(document).ready(
         console.log(greenGem),
     yellowGem = gems(),
         console.log(yellowGem),
+    gameRunning = true,
 )
 
-if (currentNumber < targetNumber){
+
+//Function to check for wins
+function checkForWin () {
+    if (currentNumber < targetNumber){
+        gameRunning = true;
+    }
+
+    else if (currentNumber == targetNumber){
+        alert("You Win");
+        wins++ ;
+        $("#wins").text("Wins: " + wins);
+        gameRunning = false;
+        reset();
+    }
+
+    else {
+        alert("You lose");
+        losses++ ;
+        $("#losses").text("Losses: " + losses);
+        gameRunning = false;
+        reset();
+    }
+}
+
+if (gameRunning == true){
+    checkForWin();
 
     $("#gem-red").click(function(){
-        currentNumber = currentNumber + redGem
-        $("#currentNumber").text("Current Number: " + currentNumber)
+        checkForWin();
+        currentNumber = currentNumber + redGem;
+        $("#currentNumber").text("Current Number: " + currentNumber);
     });
 
     $("#gem-blue").click(function(){
-        currentNumber = currentNumber + blueGem
-        $("#currentNumber").text("Current Number: " + currentNumber)
+        checkForWin();
+        currentNumber = currentNumber + blueGem;
+        $("#currentNumber").text("Current Number: " + currentNumber);
     });
 
     $("#gem-green").click(function(){
-        currentNumber = currentNumber + greenGem
-        $("#currentNumber").text("Current Number: " + currentNumber)
+        checkForWin();
+        currentNumber = currentNumber + greenGem;
+        $("#currentNumber").text("Current Number: " + currentNumber);
     });
 
     $("#gem-yellow").click(function(){
-        currentNumber = currentNumber + yellowGem
-        $("#currentNumber").text("Current Number: " + currentNumber)
+        checkForWin();
+        currentNumber = currentNumber + yellowGem;
+        $("#currentNumber").text("Current Number: " + currentNumber);
     });
 }
 
-else if (currentNumber = targetNumber){
-    alert("You Win");
-    wins++ ;
-    $("#wins").text("Wins: " + wins);
-}
 
-else {
-    alert("You lose");
-    losses++ ;
-    $("#losses").text("Losses: " + losses);
-}
+
+
 
