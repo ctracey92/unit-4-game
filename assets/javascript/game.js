@@ -69,10 +69,12 @@ $(document).ready(
 
 //Function to check for wins
 function checkForWin () {
+    //If the score is less than the target number do nothing
     if (currentNumber < targetNumber){
         gameRunning = true;
     }
 
+    //If the score is equal to the target number, alert the win, add a win, reset game
     else if (currentNumber == targetNumber){
         alert("You Win");
         wins++ ;
@@ -81,6 +83,7 @@ function checkForWin () {
         reset();
     }
 
+    //If the score is higher than the target number, alert the loss, reset the game
     else {
         alert("You lose");
         losses++ ;
@@ -90,35 +93,58 @@ function checkForWin () {
     }
 }
 
+//If the game is running proceed
 if (gameRunning == true){
-    checkForWin();
 
-    $("#gem-red").click(function(){
+    $(".gem").on('mouseup', function() {
+        if (currentNumber < targetNumber){
+            gameRunning = true;
+        }
+
+        else if (currentNumber == targetNumber){
+            alert("You Win");
+            wins++ ;
+            $("#wins").text("Wins: " + wins);
+            gameRunning = false;
+            reset();
+        }
+
+        else {
+            alert("You lose");
+            losses++ ;
+            $("#losses").text("Losses: " + losses);
+            gameRunning = false;
+            reset();
+        }
+        
+    });
+
+
+
+
+
+    $("#gem-red").mousedown(function(){
         checkForWin();
         currentNumber = currentNumber + redGem;
         $("#currentNumber").text("Current Number: " + currentNumber);
     });
 
-    $("#gem-blue").click(function(){
+    $("#gem-blue").mousedown(function(){
         checkForWin();
         currentNumber = currentNumber + blueGem;
         $("#currentNumber").text("Current Number: " + currentNumber);
     });
 
-    $("#gem-green").click(function(){
+    $("#gem-green").mousedown(function(){
         checkForWin();
         currentNumber = currentNumber + greenGem;
         $("#currentNumber").text("Current Number: " + currentNumber);
     });
 
-    $("#gem-yellow").click(function(){
+    $("#gem-yellow").mousedown(function(){
         checkForWin();
         currentNumber = currentNumber + yellowGem;
         $("#currentNumber").text("Current Number: " + currentNumber);
     });
+
 }
-
-
-
-
-
