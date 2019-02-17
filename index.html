@@ -4,31 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <title>Gem Collector Game</title>
 </head>
 <body>
-    <h1>Crystal Game</h1>
+    <h1>Link's Crystal Game</h1>
 
-    <!-- Box for wins -->
-    <div id="wins"></div>
+    <div id="game-stats">
+        <!-- Box for wins -->
+        <div id="wins"></div>
 
-    <!-- Box for losses -->
-    <div id="losses"></div>
+        <!-- Box for losses -->
+        <div id="losses"></div>
 
-    <!-- Box for target number -->
-    <div id="targetNumber"></div>
+        <!-- Box for target number -->
+        <div id="targetNumber"></div>
 
-    <!-- Box for current number -->
-    <div id="currentNumber"></div>
+        <!-- Box for current number -->
+        <div id="currentNumber"></div>
+    </div>
 
+    
+
+    <div class="container" id="gems-link">
     <!-- Gems to be clicked -->
-    <img class= "gem" id="gem-red" src="assets/images/rupees-red.jpg">
-    <img class= "gem" id="gem-blue" src="assets/images/rupees-blue.jpg">
-    <img class= "gem" id="gem-green" src="assets/images/rupees-green.jpg">
-    <img class= "gem" id="gem-yellow" src="assets/images/rupees-yellow.jpg">
+        <div class="row">    
+            <div class="col-sm-1">
+                <div class="row">
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <img class= "gem" id="gem-red" src="assets/images/red-gem.png">
+                </div>
+                <div class="row">
+                    <img class= "gem" id="gem-blue" src="assets/images/blue-gem.png">
+                </div>
+                <div class="row">
+                    <img class= "gem" id="gem-green" src="assets/images/green-gem.png">
+                </div>
+                <div class="row">
+                    <img class= "gem" id="gem-yellow" src="assets/images/yellow-gem.png">
+                </div>
+                
+            </div>
 
+            <div class="col-sm-1">
+                <!-- Link Image -->
+                <img class="link" src="assets/images/linktest2.png"> 
+            </div>
+        
+        </div>
+       
+    </div>
+
+   
 
 
 

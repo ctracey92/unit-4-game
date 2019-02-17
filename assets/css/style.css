@@ -1,4 +1,21 @@
-img {
+.gem {
     max-width: 100px;
     max-height: 100px;
+}
+
+.link {
+    max-width: 400px;
+    margin-left: auto;
+}
+
+body {
+    background-image: url(../images/linkbackground.jpg)
+}
+
+#game-stats{
+    background-color: white;
+}
+
+#gems-link{
+    max-width: 300px;
 }
