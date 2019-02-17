@@ -16,7 +16,7 @@ function gems(){
    return randomGem;
 }
 
-//Function to reset
+//Function to reset game
 function reset (){
     targetNumber = target();
     currentNumber = 0;
@@ -49,7 +49,7 @@ var yellowGem = 0;
 var wins = 0;
 var losses = 0;
 
-//Sets up the Page
+//Sets up the page on load
 $(document).ready(
     $("#wins").text("Wins: " + wins),
     $("#losses").text("Losses: " + losses),
@@ -96,6 +96,7 @@ function checkForWin () {
 //If the game is running proceed
 if (gameRunning == true){
 
+    //On release of the mouse check for win
     $(".gem").on('mouseup', function() {
         if (currentNumber < targetNumber){
             gameRunning = true;
@@ -119,30 +120,23 @@ if (gameRunning == true){
         
     });
 
-
-
-
-
+    //On press of mouse add value of specific gem to current number
     $("#gem-red").mousedown(function(){
-        checkForWin();
         currentNumber = currentNumber + redGem;
         $("#currentNumber").text("Current Number: " + currentNumber);
     });
 
     $("#gem-blue").mousedown(function(){
-        checkForWin();
         currentNumber = currentNumber + blueGem;
         $("#currentNumber").text("Current Number: " + currentNumber);
     });
 
     $("#gem-green").mousedown(function(){
-        checkForWin();
         currentNumber = currentNumber + greenGem;
         $("#currentNumber").text("Current Number: " + currentNumber);
     });
 
     $("#gem-yellow").mousedown(function(){
-        checkForWin();
         currentNumber = currentNumber + yellowGem;
         $("#currentNumber").text("Current Number: " + currentNumber);
     });
