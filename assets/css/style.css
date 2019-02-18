@@ -1,21 +1,86 @@
 .gem {
     max-width: 100px;
     max-height: 100px;
+    /* float: left; */
 }
 
 .link {
-    max-width: 400px;
-    margin-left: auto;
+    max-width: 200px;
+    /* margin-left: auto; */
 }
 
 body {
-    background-image: url(../images/linkbackground.jpg)
+    background-image: url(../images/linkbackground.jpg);
+    font-family: link;
+}
+
+h1{
+    font-size: 50px;
 }
 
 #game-stats{
-    background-color: white;
+    max-width: 300px;
+    font-size: 23px;
+    position: absolute;
+    left: 483px;
+    top: 285px;
+
 }
 
 #gems-link{
     max-width: 300px;
 }
+
+
+
+@font-face{
+    font-family: link;
+    src: url(../Script/HyliaSerifBeta-Regular.otf);
+}
+
+/* #wins{
+    position: absolute;
+    left: 510px;
+    top: 165px;
+}
+
+#losses{
+    position: absolute;
+    left: 510px;
+    top: 185px;
+}
+
+#targetNumber{
+    position: absolute;
+    left: 510px;
+    top: 205px;  
+}
+
+#currentNumber{
+    position: absolute;
+    left: 510px;
+    top: 225px;
+} */
+
+#journal{
+    position: absolute;
+    max-width: 275.25px;
+    top: 195px;
+    z-index: -10;
+    left: 450px;
+}
+
+.gemContainer {
+    position: absolute;
+    top: 200px;
+    left:740px; 
+}
+.gem-background{
+    max-width: 400px;
+    position: absolute;
+    top: -30px;
+    left: 200px;  
+    z-index: -10;
+}
+
+
