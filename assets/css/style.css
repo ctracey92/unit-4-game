@@ -67,6 +67,7 @@ h1{
     max-width: 300px;
     font-size: 22px;
     background-color: #D3D3D3; opacity: .5;
+    padding: 5px;
 }
 
 .zelda{
@@ -74,6 +75,20 @@ h1{
     top: 160px;
     left: 245px;
     height: 200px;
+}
+
+.thing {
+    height: 110px;
+    position: absolute;
+    left: -130px;
+    top: 20px;
+}
+
+.beast{
+    height: 300px;
+    position: absolute;
+    left: 450px;
+    opacity: .9;
 }
 
 
