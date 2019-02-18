@@ -15,7 +15,10 @@ body {
 }
 
 h1{
-    font-size: 50px;
+    font-size: 75px;
+    position: absolute;
+    left: 375px;
+    top: 50px;
 }
 
 #game-stats{
@@ -31,36 +34,10 @@ h1{
     max-width: 300px;
 }
 
-
-
 @font-face{
     font-family: link;
     src: url(../Script/HyliaSerifBeta-Regular.otf);
 }
-
-/* #wins{
-    position: absolute;
-    left: 510px;
-    top: 165px;
-}
-
-#losses{
-    position: absolute;
-    left: 510px;
-    top: 185px;
-}
-
-#targetNumber{
-    position: absolute;
-    left: 510px;
-    top: 205px;  
-}
-
-#currentNumber{
-    position: absolute;
-    left: 510px;
-    top: 225px;
-} */
 
 #journal{
     position: absolute;
@@ -82,5 +59,22 @@ h1{
     left: 200px;  
     z-index: -10;
 }
+
+#instructions{
+    position: absolute;
+    left: 70px;
+    top: 195px;
+    max-width: 300px;
+    font-size: 22px;
+    background-color: #D3D3D3; opacity: .5;
+}
+
+.zelda{
+    position: absolute;
+    top: 160px;
+    left: 245px;
+    height: 200px;
+}
+
 
 
