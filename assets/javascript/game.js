@@ -1,3 +1,6 @@
+//Sets up the audio variable
+var audio = new Audio("assets/themeSong.mp3");
+
 //Sets up the players current number variable
 var currentNumber = 0;
 
@@ -80,6 +83,7 @@ function checkForWin () {
         wins++ ;
         $("#wins").text("Wins: " + wins);
         gameRunning = false;
+        audio.play().then(),
         reset();
     }
 
