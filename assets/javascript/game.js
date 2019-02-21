@@ -37,6 +37,7 @@ function reset (){
         console.log(yellowGem);
     gameRunning = true;
     console.log("reset complete")
+    // audio.play().then();
 }
 
 //Sets variable for game running
@@ -69,7 +70,6 @@ $(document).ready(
     gameRunning = true,
 )
 
-
 //Function to check for wins
 function checkForWin () {
     //If the score is less than the target number do nothing
@@ -83,7 +83,6 @@ function checkForWin () {
         wins++ ;
         $("#wins").text("Wins: " + wins);
         gameRunning = false;
-        audio.play().then(),
         reset();
     }
 
