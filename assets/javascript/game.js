@@ -70,6 +70,11 @@ $(document).ready(
     gameRunning = true,
 )
 
+//On first click begins running the music
+$(document).one("click", function(){
+    $("#my_audio").get(0).play();
+});
+
 //Function to check for wins
 function checkForWin () {
     //If the score is less than the target number do nothing
